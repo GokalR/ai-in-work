@@ -691,6 +691,64 @@ html, body {
 .churn-conclusion { font-size: 20px; font-weight: 500; color: var(--text-secondary); text-align: center; margin-top: 16px; max-width: 1300px; margin-left: auto; margin-right: auto; line-height: 1.4; font-style: italic; }
 .churn-conclusion strong { color: var(--accent); font-weight: 700; }
 
+/* === Bank chat-bot mockup (мобильный стиль) === */
+.bank-chat { width: 340px; background: #f5f5f7; border-radius: 28px; margin: 0 auto; box-shadow: 0 12px 40px rgba(0,0,0,0.5); overflow: hidden; font-family: -apple-system, 'Segoe UI', Roboto, sans-serif; flex-shrink: 0; }
+.bank-chat-header { background: #f0f0f4; padding: 14px 14px 12px; text-align: center; border-bottom: 1px solid rgba(0,0,0,0.06); position: relative; }
+.bank-chat-header .back { position: absolute; left: 14px; top: 16px; color: #4a90d9; font-size: 18px; font-weight: 600; }
+.bank-chat-header .avatar { position: absolute; right: 12px; top: 10px; width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #c0c8d4, #8a9ab0); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 13px; font-weight: 700; }
+.bank-chat-header .name { font-size: 14px; font-weight: 700; color: #1a1a1a; line-height: 1.1; }
+.bank-chat-header .status { font-size: 11px; color: #6b7280; margin-top: 2px; }
+.bank-chat-body { background: #e3eaf3; padding: 12px 10px; display: flex; flex-direction: column; gap: 6px; min-height: 280px; max-height: 360px; overflow: hidden; }
+.bank-chat-day { align-self: center; background: rgba(110, 140, 170, 0.55); color: white; font-size: 10px; padding: 3px 12px; border-radius: 12px; font-weight: 600; margin: 4px 0; }
+.bank-msg { max-width: 82%; padding: 7px 10px 6px; border-radius: 12px; font-size: 11.5px; line-height: 1.35; color: #1a1a1a; word-wrap: break-word; box-shadow: 0 1px 0.5px rgba(0,0,0,0.06); }
+.bank-msg.user { background: #cce4f6; align-self: flex-end; border-bottom-right-radius: 4px; }
+.bank-msg.bot { background: #ffffff; align-self: flex-start; border-bottom-left-radius: 4px; }
+.bank-msg .time { font-size: 9px; color: #8a93a0; text-align: right; margin-top: 2px; line-height: 1; }
+.bank-msg.bot .time { text-align: left; }
+.bank-msg.user .time::after { content: ' ✓✓'; color: #4a90d9; font-weight: 600; }
+
+/* === Two-column case slide (left text, right mobile chat) === */
+.case-layout { display: grid; grid-template-columns: 1fr 380px; gap: 48px; align-items: center; flex: 1; }
+.case-text { display: flex; flex-direction: column; gap: 20px; }
+.case-text .ttl-section { font-size: 18px; font-weight: 700; color: var(--text-primary); margin-top: 8px; margin-bottom: 4px; }
+.case-text .bullet-group { display: flex; flex-direction: column; gap: 6px; padding-left: 16px; }
+.case-text .bullet-group .group-name { font-size: 18px; font-weight: 700; color: var(--accent); margin-bottom: 4px; margin-left: -16px; }
+.case-text ul { list-style: none; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; }
+.case-text ul li { font-size: 18px; color: var(--text-secondary); line-height: 1.4; position: relative; padding-left: 18px; }
+.case-text ul li::before { content: '–'; position: absolute; left: 0; color: var(--text-muted); }
+.case-result { background: var(--bg-elevated); border-left: 4px solid var(--accent); padding: 14px 22px; border-radius: 0 8px 8px 0; }
+.case-result .lbl { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+.case-result .txt { font-size: 18px; color: var(--text-primary); line-height: 1.4; font-weight: 500; }
+.case-metric { display: inline-flex; align-items: center; gap: 12px; background: var(--accent-soft); border: 1.5px solid var(--accent); padding: 10px 20px; border-radius: 100px; align-self: flex-start; }
+.case-metric .num { font-family: var(--font-serif); font-style: italic; font-weight: 700; font-size: 28px; color: var(--accent); line-height: 1; }
+.case-metric .lbl { font-size: 15px; font-weight: 600; color: var(--text-primary); line-height: 1.3; }
+
+/* === Hybrid pipeline (для санкционного контроля) === */
+.hybrid-flow { display: flex; align-items: stretch; gap: 12px; flex: 1; padding: 8px 0; }
+.hybrid-step { background: var(--bg-elevated); border: 1.5px solid var(--border-strong); border-radius: 14px; padding: 22px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 0; position: relative; }
+.hybrid-step.dl { border-color: rgba(120,165,120,0.6); background: linear-gradient(180deg, rgba(120,165,120,0.12), var(--bg-elevated)); }
+.hybrid-step.gen { border-color: var(--accent); background: linear-gradient(180deg, rgba(201,169,110,0.12), var(--bg-elevated)); }
+.hybrid-step.ml { border-color: rgba(168,120,120,0.6); background: linear-gradient(180deg, rgba(168,120,120,0.12), var(--bg-elevated)); }
+.hybrid-step .tech-tag { position: absolute; top: -10px; left: 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; background: var(--bg-primary); }
+.hybrid-step.dl .tech-tag { color: #95c095; border: 1px solid #95c095; }
+.hybrid-step.gen .tech-tag { color: var(--accent); border: 1px solid var(--accent); }
+.hybrid-step.ml .tech-tag { color: var(--warning); border: 1px solid var(--warning); }
+.hybrid-step .step-num { font-family: var(--font-serif); font-style: italic; font-weight: 700; font-size: 36px; color: var(--accent); line-height: 1; }
+.hybrid-step .step-h { font-size: 18px; font-weight: 700; color: var(--text-primary); line-height: 1.2; }
+.hybrid-step .step-d { font-size: 14px; color: var(--text-secondary); line-height: 1.4; font-weight: 500; }
+.hybrid-arrow { display: flex; align-items: center; color: var(--accent); }
+.hybrid-arrow svg { width: 20px; height: 20px; }
+
+/* === Voice bot pipeline === */
+.voice-flow { display: grid; grid-template-columns: 1fr 60px 1fr 60px 1fr; gap: 14px; align-items: center; flex: 1; padding: 16px 0; }
+.voice-stage { background: var(--bg-elevated); border: 1.5px solid var(--border-subtle); border-radius: 14px; padding: 24px 18px; display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center; min-height: 240px; justify-content: center; }
+.voice-stage svg { width: 48px; height: 48px; color: var(--accent); }
+.voice-stage .v-name { font-size: 20px; font-weight: 700; color: var(--text-primary); }
+.voice-stage .v-tag { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); font-weight: 700; }
+.voice-stage .v-d { font-size: 15px; color: var(--text-secondary); line-height: 1.4; font-weight: 500; }
+.voice-arrow { display: flex; align-items: center; justify-content: center; color: var(--accent); }
+.voice-arrow svg { width: 24px; height: 24px; }
+
 /* === Example badge (Пример #N – ...) === */
 .example-badge {
   display: inline-flex;
@@ -871,8 +929,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Программа</div>
-  <div class="chrome-num t-caption">01 / 79</div>
-  <div class="chrome-progress"><span style="width: 1.27%"></span></div>
+  <div class="chrome-num t-caption">01 / 83</div>
+  <div class="chrome-progress"><span style="width: 1.2%"></span></div>
 </section>
 
 <!-- ============== SLIDE 2 – О чём это занятие (Q&A format) ============== -->
@@ -906,8 +964,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Программа</div>
-  <div class="chrome-num t-caption">02 / 79</div>
-  <div class="chrome-progress"><span style="width: 2.53%"></span></div>
+  <div class="chrome-num t-caption">02 / 83</div>
+  <div class="chrome-progress"><span style="width: 2.41%"></span></div>
 </section>
 
 <!-- ============== SLIDE NEW – Roadmap of all sections ============== -->
@@ -929,8 +987,8 @@ html, body {
       <div class="roadmap-item anim" style="animation-delay: 480ms"><span class="num">8</span><div class="body"><div class="name">Я и AI: где мы?</div><div class="desc">Фиксируем текущий уровень взаимодействия с AI: что уже в работе, что остаётся барьером</div></div></div>
     </div>
   </div>
-  <div class="chrome-num t-caption">03 / 79</div>
-  <div class="chrome-progress"><span style="width: 3.8%"></span></div>
+  <div class="chrome-num t-caption">03 / 83</div>
+  <div class="chrome-progress"><span style="width: 3.61%"></span></div>
 </section>
 
 <!-- ============== SLIDE 4 – AI: общая структура (опенер раздела) ============== -->
@@ -944,8 +1002,8 @@ html, body {
       <p class="tagline anim" style="animation-delay: 600ms">Сначала разберёмся, что вообще скрывается за этим словом.</p>
     </div>
   </div>
-  <div class="chrome-num t-caption">04 / 79</div>
-  <div class="chrome-progress"><span style="width: 5.06%"></span></div>
+  <div class="chrome-num t-caption">04 / 83</div>
+  <div class="chrome-progress"><span style="width: 4.82%"></span></div>
 </section>
 <section class="slide compact" data-section="§1 · Что такое ИИ">
   <div class="slide-inner">
@@ -985,8 +1043,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Что такое AI</div>
-  <div class="chrome-num t-caption">05 / 79</div>
-  <div class="chrome-progress"><span style="width: 6.33%"></span></div>
+  <div class="chrome-num t-caption">05 / 83</div>
+  <div class="chrome-progress"><span style="width: 6.02%"></span></div>
 </section>
 
 <!-- ============== SLIDE 5 – Три вещи: примеры в банке (был SLIDE 4) ============== -->
@@ -1016,8 +1074,8 @@ html, body {
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">06 / 79</div>
-  <div class="chrome-progress"><span style="width: 7.59%"></span></div>
+  <div class="chrome-num t-caption">06 / 83</div>
+  <div class="chrome-progress"><span style="width: 7.23%"></span></div>
 </section>
 <section class="slide" data-section="§2 · Сравнение">
   <div class="slide-inner">
@@ -1048,8 +1106,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Что такое AI</div>
-  <div class="chrome-num t-caption">07 / 79</div>
-  <div class="chrome-progress"><span style="width: 8.86%"></span></div>
+  <div class="chrome-num t-caption">07 / 83</div>
+  <div class="chrome-progress"><span style="width: 8.43%"></span></div>
 </section>
 
 <!-- ============== SLIDE 7 – Сравнение (3-column) ============== -->
@@ -1108,8 +1166,8 @@ html, body {
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">08 / 79</div>
-  <div class="chrome-progress"><span style="width: 10.13%"></span></div>
+  <div class="chrome-num t-caption">08 / 83</div>
+  <div class="chrome-progress"><span style="width: 9.64%"></span></div>
 </section>
 
 <!-- ============== §3 ML – Где Classical ML работает в банке ============== -->
@@ -1123,8 +1181,8 @@ html, body {
       <p class="tagline anim" style="animation-delay: 600ms">Узкие задачи, размеченные данные, измеримая точность.</p>
     </div>
   </div>
-  <div class="chrome-num t-caption">09 / 79</div>
-  <div class="chrome-progress"><span style="width: 11.39%"></span></div>
+  <div class="chrome-num t-caption">09 / 83</div>
+  <div class="chrome-progress"><span style="width: 10.84%"></span></div>
 </section>
 
 <!-- ============== SLIDE 5 – Классический AI ============== -->
@@ -1188,8 +1246,8 @@ html, body {
     </div>
     <div class="proc-caption anim" style="animation-delay: 600ms">Одна задача. Один тип ответа. Точность измерима. Поведение предсказуемо.</div>
   </div>
-  <div class="chrome-num t-caption">10 / 79</div>
-  <div class="chrome-progress"><span style="width: 12.66%"></span></div>
+  <div class="chrome-num t-caption">10 / 83</div>
+  <div class="chrome-progress"><span style="width: 12.05%"></span></div>
 </section>
 
 <!-- ============== NEW – Антифрод "для ребёнка" – упрощённое объяснение ============== -->
@@ -1250,8 +1308,8 @@ html, body {
       Никто не писал правило <strong>«120 000 ночью в Турции = подозрение»</strong>. Детектор сам это «выучил», просмотрев миллионы случаев. Когда мы говорим <strong>«ML учится на данных»</strong> – это ровно про это.
     </div>
   </div>
-  <div class="chrome-num t-caption">11 / 79</div>
-  <div class="chrome-progress"><span style="width: 13.92%"></span></div>
+  <div class="chrome-num t-caption">11 / 83</div>
+  <div class="chrome-progress"><span style="width: 13.25%"></span></div>
 </section>
 
 <!-- ============== §3 ML – Real example: Churn model end-to-end ============== -->
@@ -1338,8 +1396,8 @@ html, body {
       <strong>Вся логика – обучена, не написана</strong>. Никто не программировал «если транзакций меньше 5 → отток». Модель сама нашла такие паттерны в исторических данных. То же самое для антифрода, скоринга, soft collection.
     </div>
   </div>
-  <div class="chrome-num t-caption">12 / 79</div>
-  <div class="chrome-progress"><span style="width: 15.19%"></span></div>
+  <div class="chrome-num t-caption">12 / 83</div>
+  <div class="chrome-progress"><span style="width: 14.46%"></span></div>
 </section>
 
 <section class="slide" data-section="§3 · Три направления AI · Classical ML">
@@ -1347,33 +1405,43 @@ html, body {
     <div class="title-block anim">
       <div class="eyebrow"><span class="t-caption secondary">Опенер раздела</span></div>
       <h2 class="t-h2">Где Classical ML уже работает в компаниях</h2>
-      <p class="subtitle">Узкие задачи, размеченные данные, измеримая точность. <em style="color: var(--accent); font-style: normal; font-weight: 600;">Возьмём пример банковского сектора</em> – ML-системы давно встроены в работу банка.</p>
+      <p class="subtitle">Узкие задачи, размеченные данные, измеримая точность. ML-системы давно встроены в работу самых разных индустрий – не только в банках.</p>
     </div>
-    <div class="grid-2x2">
-      <div class="numbered-card anim" style="animation-delay: 100ms">
-        <div class="num">01</div>
-        <div class="title">Антифрод</div>
-        <div class="desc">Каждая транзакция сравнивается с миллионами прошлых. Подозрительные блокируются за миллисекунды.</div>
+    <div class="grid-2x2" style="grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1500px;">
+      <div class="numbered-card anim" style="animation-delay: 100ms; padding: 24px; gap: 10px;">
+        <div class="num" style="font-size: 48px;">01</div>
+        <div class="title" style="font-size: 24px;">Антифрод <span style="font-size: 14px; color: var(--text-muted); font-weight: 500;">· банк</span></div>
+        <div class="desc" style="font-size: 18px;">Каждая транзакция сравнивается с миллионами прошлых. Подозрительные блокируются за миллисекунды.</div>
       </div>
-      <div class="numbered-card anim" style="animation-delay: 200ms">
-        <div class="num">02</div>
-        <div class="title">Кредитный скоринг</div>
-        <div class="desc">Оценка вероятности дефолта по сотням признаков клиента. Решение по заявке за секунды.</div>
+      <div class="numbered-card anim" style="animation-delay: 180ms; padding: 24px; gap: 10px;">
+        <div class="num" style="font-size: 48px;">02</div>
+        <div class="title" style="font-size: 24px;">Кредитный скоринг <span style="font-size: 14px; color: var(--text-muted); font-weight: 500;">· банк</span></div>
+        <div class="desc" style="font-size: 18px;">Оценка вероятности дефолта по сотням признаков клиента. Решение по заявке за секунды.</div>
       </div>
-      <div class="numbered-card anim" style="animation-delay: 300ms">
-        <div class="num">03</div>
-        <div class="title">Soft Collection</div>
-        <div class="desc">Прогноз – кто из просрочников вернётся в график без активного взыскания. Экономит звонки и людей.</div>
+      <div class="numbered-card anim" style="animation-delay: 260ms; padding: 24px; gap: 10px;">
+        <div class="num" style="font-size: 48px;">03</div>
+        <div class="title" style="font-size: 24px;">Churn-модели <span style="font-size: 14px; color: var(--text-muted); font-weight: 500;">· банк</span></div>
+        <div class="desc" style="font-size: 18px;">Предсказание оттока клиентов до его наступления – чтобы успеть удержать акцией или контактом.</div>
       </div>
-      <div class="numbered-card anim" style="animation-delay: 400ms">
-        <div class="num">04</div>
-        <div class="title">Churn-модели</div>
-        <div class="desc">Предсказание оттока клиентов до его наступления – чтобы успеть удержать акцией или контактом.</div>
+      <div class="numbered-card anim" style="animation-delay: 340ms; padding: 24px; gap: 10px;">
+        <div class="num" style="font-size: 48px;">04</div>
+        <div class="title" style="font-size: 24px;">Soft Collection <span style="font-size: 14px; color: var(--text-muted); font-weight: 500;">· банк</span></div>
+        <div class="desc" style="font-size: 18px;">Прогноз – кто из просрочников вернётся в график без активного взыскания. Экономит звонки и людей.</div>
+      </div>
+      <div class="numbered-card anim" style="animation-delay: 420ms; padding: 24px; gap: 10px;">
+        <div class="num" style="font-size: 48px;">05</div>
+        <div class="title" style="font-size: 24px;">Рекомендации <span style="font-size: 14px; color: var(--text-muted); font-weight: 500;">· e-commerce</span></div>
+        <div class="desc" style="font-size: 18px;">Wildberries, Ozon, Amazon – «вам также понравится». Модель учится на истории миллионов покупателей.</div>
+      </div>
+      <div class="numbered-card anim" style="animation-delay: 500ms; padding: 24px; gap: 10px;">
+        <div class="num" style="font-size: 48px;">06</div>
+        <div class="title" style="font-size: 24px;">Прогноз спроса <span style="font-size: 14px; color: var(--text-muted); font-weight: 500;">· ритейл, логистика</span></div>
+        <div class="desc" style="font-size: 18px;">Сколько товара завезти на склад, сколько курьеров вывести в смену. Экономит запасы и зарплату.</div>
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">13 / 79</div>
-  <div class="chrome-progress"><span style="width: 16.46%"></span></div>
+  <div class="chrome-num t-caption">13 / 83</div>
+  <div class="chrome-progress"><span style="width: 15.66%"></span></div>
 </section>
 
 <!-- ============== §3 ML – Бизнес-эффект (NEW) ============== -->
@@ -1382,34 +1450,44 @@ html, body {
     <div class="title-block anim">
       <div class="eyebrow"><span class="t-caption secondary">Раздел 3 – Бизнес-эффект</span></div>
       <h2 class="t-h2">Что Classical ML даёт бизнесу в цифрах</h2>
-      <p class="subtitle">«Уже работает» – мало. Важно, какой эффект это даёт. Типовые показатели по индустрии для четырёх ML-направлений из предыдущего слайда.</p>
+      <p class="subtitle">«Уже работает» – мало. Важно, какой эффект это даёт. Типовые показатели по индустрии для шести ML-направлений из предыдущего слайда.</p>
     </div>
-    <div class="grid-2x2" style="max-width: 1400px;">
-      <div class="numbered-card anim" style="animation-delay: 100ms">
-        <div class="num">01</div>
-        <div class="title">Антифрод</div>
-        <div class="desc"><strong style="color: var(--accent)">−40 до −70%</strong> убытков от мошенничества. Каждая транзакция проверяется автоматически за миллисекунды – человек физически столько не успеет.</div>
+    <div class="grid-2x2" style="grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1500px;">
+      <div class="numbered-card anim" style="animation-delay: 100ms; padding: 24px; gap: 10px;">
+        <div class="num" style="font-size: 48px;">01</div>
+        <div class="title" style="font-size: 22px;">Антифрод <span style="font-size: 13px; color: var(--text-muted); font-weight: 500;">· банк</span></div>
+        <div class="desc" style="font-size: 17px;"><strong style="color: var(--accent)">−40 до −70%</strong> убытков от мошенничества. Каждая транзакция проверяется автоматически за миллисекунды.</div>
       </div>
-      <div class="numbered-card anim" style="animation-delay: 200ms">
-        <div class="num">02</div>
-        <div class="title">Кредитный скоринг</div>
-        <div class="desc"><strong style="color: var(--accent)">−15 до −30%</strong> просрочки в портфеле при том же объёме выдачи. Решение по заявке за 30 секунд вместо часов ручного андеррайтинга.</div>
+      <div class="numbered-card anim" style="animation-delay: 180ms; padding: 24px; gap: 10px;">
+        <div class="num" style="font-size: 48px;">02</div>
+        <div class="title" style="font-size: 22px;">Кредитный скоринг <span style="font-size: 13px; color: var(--text-muted); font-weight: 500;">· банк</span></div>
+        <div class="desc" style="font-size: 17px;"><strong style="color: var(--accent)">−15 до −30%</strong> просрочки в портфеле при том же объёме выдачи. Решение по заявке за 30 секунд вместо часов.</div>
       </div>
-      <div class="numbered-card anim" style="animation-delay: 300ms">
-        <div class="num">03</div>
-        <div class="title">Soft Collection</div>
-        <div class="desc"><strong style="color: var(--accent)">−25 до −40%</strong> расходов на колл-центр взыскания. Система звонит только тем, кто реально не вернётся в график без контакта.</div>
+      <div class="numbered-card anim" style="animation-delay: 260ms; padding: 24px; gap: 10px;">
+        <div class="num" style="font-size: 48px;">03</div>
+        <div class="title" style="font-size: 22px;">Churn-модели <span style="font-size: 13px; color: var(--text-muted); font-weight: 500;">· банк</span></div>
+        <div class="desc" style="font-size: 17px;"><strong style="color: var(--accent)">+10 до +20%</strong> к удержанию клиентов в highest-risk сегменте. ROI окупается за 2-3 квартала.</div>
       </div>
-      <div class="numbered-card anim" style="animation-delay: 400ms">
-        <div class="num">04</div>
-        <div class="title">Churn-модели</div>
-        <div class="desc"><strong style="color: var(--accent)">+10 до +20%</strong> к удержанию клиентов в highest-risk сегменте. Удерживать дешевле, чем привлекать заново – ROI окупается за 2-3 квартала.</div>
+      <div class="numbered-card anim" style="animation-delay: 340ms; padding: 24px; gap: 10px;">
+        <div class="num" style="font-size: 48px;">04</div>
+        <div class="title" style="font-size: 22px;">Soft Collection <span style="font-size: 13px; color: var(--text-muted); font-weight: 500;">· банк</span></div>
+        <div class="desc" style="font-size: 17px;"><strong style="color: var(--accent)">−25 до −40%</strong> расходов на колл-центр взыскания. Система звонит только тем, кто без контакта не вернётся.</div>
+      </div>
+      <div class="numbered-card anim" style="animation-delay: 420ms; padding: 24px; gap: 10px;">
+        <div class="num" style="font-size: 48px;">05</div>
+        <div class="title" style="font-size: 22px;">Рекомендации <span style="font-size: 13px; color: var(--text-muted); font-weight: 500;">· e-commerce</span></div>
+        <div class="desc" style="font-size: 17px;"><strong style="color: var(--accent)">+15 до +30%</strong> к среднему чеку. Amazon оценивает ~35% выручки именно от рекомендательных систем.</div>
+      </div>
+      <div class="numbered-card anim" style="animation-delay: 500ms; padding: 24px; gap: 10px;">
+        <div class="num" style="font-size: 48px;">06</div>
+        <div class="title" style="font-size: 22px;">Прогноз спроса <span style="font-size: 13px; color: var(--text-muted); font-weight: 500;">· ритейл</span></div>
+        <div class="desc" style="font-size: 17px;"><strong style="color: var(--accent)">−20 до −40%</strong> запасов на складах при том же сервис-уровне. Меньше overstock, меньше списаний.</div>
       </div>
     </div>
-    <div style="background: var(--bg-elevated); border-left: 3px solid var(--accent); padding: 14px 22px; border-radius: 0 6px 6px 0; margin-top: 20px; max-width: 1400px; margin-left: auto; margin-right: auto; font-size: 16px; color: var(--text-secondary); font-style: italic;">Цифры – типовые диапазоны по открытым кейсам банков. Конкретный эффект зависит от качества данных, портфеля и зрелости процессов.</div>
+    <div style="background: var(--bg-elevated); border-left: 3px solid var(--accent); padding: 12px 22px; border-radius: 0 6px 6px 0; margin-top: 16px; max-width: 1500px; margin-left: auto; margin-right: auto; font-size: 15px; color: var(--text-secondary); font-style: italic;">Цифры – типовые диапазоны по открытым кейсам. Конкретный эффект зависит от качества данных и зрелости процессов.</div>
   </div>
-  <div class="chrome-num t-caption">14 / 79</div>
-  <div class="chrome-progress"><span style="width: 17.72%"></span></div>
+  <div class="chrome-num t-caption">14 / 83</div>
+  <div class="chrome-progress"><span style="width: 16.87%"></span></div>
 </section>
 
 <!-- ============== §3 ML – Где может ошибиться ============== -->
@@ -1429,12 +1507,12 @@ html, body {
       <div class="numbered-card anim" style="animation-delay: 200ms">
         <div class="num">02</div>
         <div class="title">Edge cases</div>
-        <div class="desc">Для редких случаев – VIP-клиенты, нестандартные продукты – обучающих примеров мало. Точность падает именно там, где цена ошибки выше.</div>
+        <div class="desc">Для редких случаев – нестандартные клиенты или продукты – обучающих примеров мало. Точность падает именно там, где цена ошибки выше.</div>
       </div>
       <div class="numbered-card anim" style="animation-delay: 300ms">
         <div class="num">03</div>
         <div class="title">Чёрный ящик</div>
-        <div class="desc">Модель отказала клиенту в кредите – но не объясняет почему. Регулятор и клиент имеют право на объяснение, которого у модели нет.</div>
+        <div class="desc">Модель отказала в кредите или флагнула транзакцию – но не объясняет почему. Регулятор и клиент имеют право на объяснение, которого у модели нет.</div>
       </div>
       <div class="numbered-card anim" style="animation-delay: 400ms">
         <div class="num">04</div>
@@ -1443,8 +1521,8 @@ html, body {
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">15 / 79</div>
-  <div class="chrome-progress"><span style="width: 18.99%"></span></div>
+  <div class="chrome-num t-caption">15 / 83</div>
+  <div class="chrome-progress"><span style="width: 18.07%"></span></div>
 </section>
 
 <!-- ============== §3 ML – Q аудитории ============== -->
@@ -1453,16 +1531,16 @@ html, body {
     <div class="aq-block">
       <div class="aq-eyebrow anim">Вопрос аудитории</div>
       <div class="aq-line anim-line" style="animation-delay: 200ms"></div>
-      <h2 class="aq-title anim" style="animation-delay: 350ms">А у вас уже был такой опыт с ML-моделями?</h2>
-      <div class="aq-sub anim" style="animation-delay: 500ms">2 минуты на короткий обмен. Скоринг, антифрод, churn – где сталкивались.</div>
+      <h2 class="aq-title anim" style="animation-delay: 350ms">А вы где сталкиваетесь с ML?</h2>
+      <div class="aq-sub anim" style="animation-delay: 500ms">2 минуты на короткий обмен. Не только в работе – в банке, в маркетплейсе, в навигаторе, в рекомендациях.</div>
       <div class="aq-prompts">
         <div class="aq-prompt anim" style="animation-delay: 700ms">
           <span class="marker">01</span>
-          <span>Где у вас в жизни уже работают классические ML-модели?</span>
+          <span>Где в жизни вы уже встречались с классическими ML-моделями? Что заметили?</span>
         </div>
         <div class="aq-prompt anim" style="animation-delay: 820ms">
           <span class="marker">02</span>
-          <span>Был ли случай, когда модель явно ошиблась – и как заметили?</span>
+          <span>Был ли случай, когда модель явно ошиблась – и как поняли?</span>
         </div>
         <div class="aq-prompt anim" style="animation-delay: 940ms">
           <span class="marker">03</span>
@@ -1471,8 +1549,8 @@ html, body {
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">16 / 79</div>
-  <div class="chrome-progress"><span style="width: 20.25%"></span></div>
+  <div class="chrome-num t-caption">16 / 83</div>
+  <div class="chrome-progress"><span style="width: 19.28%"></span></div>
 </section>
 
 <!-- ============== §4 DL – Что такое Deep Learning ============== -->
@@ -1486,8 +1564,8 @@ html, body {
       <p class="tagline anim" style="animation-delay: 600ms">Подкласс ML на нейросетях. Распознаёт лица, голос, текст в документах.</p>
     </div>
   </div>
-  <div class="chrome-num t-caption">17 / 79</div>
-  <div class="chrome-progress"><span style="width: 21.52%"></span></div>
+  <div class="chrome-num t-caption">17 / 83</div>
+  <div class="chrome-progress"><span style="width: 20.48%"></span></div>
 </section>
 <section class="slide" data-section="§3 · Три направления AI · Deep Learning">
   <div class="slide-inner">
@@ -1513,8 +1591,8 @@ html, body {
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">18 / 79</div>
-  <div class="chrome-progress"><span style="width: 22.78%"></span></div>
+  <div class="chrome-num t-caption">18 / 83</div>
+  <div class="chrome-progress"><span style="width: 21.69%"></span></div>
 </section>
 
 <!-- ============== §4 DL – 4 ключевые технологии ============== -->
@@ -1548,8 +1626,8 @@ html, body {
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">19 / 79</div>
-  <div class="chrome-progress"><span style="width: 24.05%"></span></div>
+  <div class="chrome-num t-caption">19 / 83</div>
+  <div class="chrome-progress"><span style="width: 22.89%"></span></div>
 </section>
 
 <!-- ============== §4 DL – Real example: OCR pipeline for currency control ============== -->
@@ -1638,8 +1716,8 @@ html, body {
       Время одной операции – с <strong>15 минут ручного ввода</strong> до <strong>30 секунд проверки</strong>. Дальше – на основе этих полей: проверка санкционных списков, валютной позиции, классификация ВО.
     </div>
   </div>
-  <div class="chrome-num t-caption">20 / 79</div>
-  <div class="chrome-progress"><span style="width: 25.32%"></span></div>
+  <div class="chrome-num t-caption">20 / 83</div>
+  <div class="chrome-progress"><span style="width: 24.1%"></span></div>
 </section>
 
 <!-- ============== §4 DL – Применение в банке ============== -->
@@ -1674,8 +1752,8 @@ html, body {
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">21 / 79</div>
-  <div class="chrome-progress"><span style="width: 26.58%"></span></div>
+  <div class="chrome-num t-caption">21 / 83</div>
+  <div class="chrome-progress"><span style="width: 25.3%"></span></div>
 </section>
 
 <!-- ============== §4 DL – Бизнес-эффект (NEW) ============== -->
@@ -1705,8 +1783,8 @@ html, body {
     </div>
     <div style="background: var(--bg-elevated); border-left: 3px solid var(--accent); padding: 14px 22px; border-radius: 0 6px 6px 0; margin-top: 24px; max-width: 1400px; margin-left: auto; margin-right: auto; font-size: 16px; color: var(--text-secondary); font-style: italic;">Цифры – типовые диапазоны по открытым кейсам. Конкретный эффект зависит от качества данных на входе и того, насколько процесс реально перестроен под автоматизацию.</div>
   </div>
-  <div class="chrome-num t-caption">22 / 79</div>
-  <div class="chrome-progress"><span style="width: 27.85%"></span></div>
+  <div class="chrome-num t-caption">22 / 83</div>
+  <div class="chrome-progress"><span style="width: 26.51%"></span></div>
 </section>
 
 <!-- ============== §4 DL – Где может ошибиться ============== -->
@@ -1740,8 +1818,8 @@ html, body {
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">23 / 79</div>
-  <div class="chrome-progress"><span style="width: 29.11%"></span></div>
+  <div class="chrome-num t-caption">23 / 83</div>
+  <div class="chrome-progress"><span style="width: 27.71%"></span></div>
 </section>
 
 <!-- ============== §4 DL – Q аудитории ============== -->
@@ -1768,8 +1846,8 @@ html, body {
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">24 / 79</div>
-  <div class="chrome-progress"><span style="width: 30.38%"></span></div>
+  <div class="chrome-num t-caption">24 / 83</div>
+  <div class="chrome-progress"><span style="width: 28.92%"></span></div>
 </section>
 
 <section class="slide center" data-section="§3 · Три направления AI · Generative AI">
@@ -1781,8 +1859,8 @@ html, body {
       <p class="tagline anim" style="animation-delay: 600ms">Та самая технология, про которую сейчас все говорят. Самая молодая и самая нестабильная.</p>
     </div>
   </div>
-  <div class="chrome-num t-caption">25 / 79</div>
-  <div class="chrome-progress"><span style="width: 31.65%"></span></div>
+  <div class="chrome-num t-caption">25 / 83</div>
+  <div class="chrome-progress"><span style="width: 30.12%"></span></div>
 </section>
 
 <!-- ============== SLIDE NEW – Glossary (terms used in §2) ============== -->
@@ -1846,8 +1924,8 @@ html, body {
     <div class="proc-caption anim" style="animation-delay: 600ms">Множество задач. Вариативные ответы. Точность не всегда измерима. Поведение нестабильно.</div>
   </div>
   <div class="chrome-section t-caption">Что такое AI</div>
-  <div class="chrome-num t-caption">26 / 79</div>
-  <div class="chrome-progress"><span style="width: 32.91%"></span></div>
+  <div class="chrome-num t-caption">26 / 83</div>
+  <div class="chrome-progress"><span style="width: 31.33%"></span></div>
 </section>
 
 <section class="slide" data-section="§3 · Три направления AI · Generative AI">
@@ -1885,8 +1963,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Терминология</div>
-  <div class="chrome-num t-caption">27 / 79</div>
-  <div class="chrome-progress"><span style="width: 34.18%"></span></div>
+  <div class="chrome-num t-caption">27 / 83</div>
+  <div class="chrome-progress"><span style="width: 32.53%"></span></div>
 </section>
 
 <!-- ============== SLIDE 11 – Главный образ ============== -->
@@ -1899,8 +1977,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Как устроено</div>
-  <div class="chrome-num t-caption">28 / 79</div>
-  <div class="chrome-progress"><span style="width: 35.44%"></span></div>
+  <div class="chrome-num t-caption">28 / 83</div>
+  <div class="chrome-progress"><span style="width: 33.73%"></span></div>
 </section>
 
 <!-- ============== SLIDE 12 – Phone autocomplete ============== -->
@@ -1937,8 +2015,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Как устроено</div>
-  <div class="chrome-num t-caption">29 / 79</div>
-  <div class="chrome-progress"><span style="width: 36.71%"></span></div>
+  <div class="chrome-num t-caption">29 / 83</div>
+  <div class="chrome-progress"><span style="width: 34.94%"></span></div>
 </section>
 
 <!-- ============== SLIDE 13 – Embedding space + probabilities ============== -->
@@ -2019,8 +2097,8 @@ html, body {
     <div class="proc-caption anim" style="animation-delay: 900ms; max-width: 1200px;">Каждое слово живёт в пространстве смыслов. Чем ближе кандидат к контексту – тем выше его вероятность. Модель берёт самое близкое и переходит к следующему слову.</div>
   </div>
   <div class="chrome-section t-caption">Как устроено</div>
-  <div class="chrome-num t-caption">30 / 79</div>
-  <div class="chrome-progress"><span style="width: 37.97%"></span></div>
+  <div class="chrome-num t-caption">30 / 83</div>
+  <div class="chrome-progress"><span style="width: 36.14%"></span></div>
 </section>
 
 <!-- ============== SLIDE NEW – Word space dual visualization ============== -->
@@ -2142,8 +2220,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Как устроено</div>
-  <div class="chrome-num t-caption">31 / 79</div>
-  <div class="chrome-progress"><span style="width: 39.24%"></span></div>
+  <div class="chrome-num t-caption">31 / 83</div>
+  <div class="chrome-progress"><span style="width: 37.35%"></span></div>
 </section>
 
 <!-- ============== SLIDE NEW – Live typing animation (after dual word space, before training data) ============== -->
@@ -2189,8 +2267,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Как устроено</div>
-  <div class="chrome-num t-caption">32 / 79</div>
-  <div class="chrome-progress"><span style="width: 40.51%"></span></div>
+  <div class="chrome-num t-caption">32 / 83</div>
+  <div class="chrome-progress"><span style="width: 38.55%"></span></div>
 </section>
 
 <!-- ============== SLIDE NEW – Hook: 100K+ options per token ============== -->
@@ -2224,8 +2302,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Под капотом</div>
-  <div class="chrome-num t-caption">33 / 79</div>
-  <div class="chrome-progress"><span style="width: 41.77%"></span></div>
+  <div class="chrome-num t-caption">33 / 83</div>
+  <div class="chrome-progress"><span style="width: 39.76%"></span></div>
 </section>
 
 <!-- ============== SLIDE NEW – Pipeline overview (5 steps) ============== -->
@@ -2304,8 +2382,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Под капотом</div>
-  <div class="chrome-num t-caption">34 / 79</div>
-  <div class="chrome-progress"><span style="width: 43.04%"></span></div>
+  <div class="chrome-num t-caption">34 / 83</div>
+  <div class="chrome-progress"><span style="width: 40.96%"></span></div>
 </section>
 
 <!-- ============== SLIDE 14 – Data flow ============== -->
@@ -2349,8 +2427,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Как устроено</div>
-  <div class="chrome-num t-caption">35 / 79</div>
-  <div class="chrome-progress"><span style="width: 44.3%"></span></div>
+  <div class="chrome-num t-caption">35 / 83</div>
+  <div class="chrome-progress"><span style="width: 42.17%"></span></div>
 </section>
 
 <section class="slide" data-section="§3 · Три направления AI · Generative AI">
@@ -2390,8 +2468,8 @@ html, body {
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">36 / 79</div>
-  <div class="chrome-progress"><span style="width: 45.57%"></span></div>
+  <div class="chrome-num t-caption">36 / 83</div>
+  <div class="chrome-progress"><span style="width: 43.37%"></span></div>
 </section>
 
 <!-- ============== §5 GenAI – Где работает в компаниях (NEW) ============== -->
@@ -2425,8 +2503,8 @@ html, body {
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">37 / 79</div>
-  <div class="chrome-progress"><span style="width: 46.84%"></span></div>
+  <div class="chrome-num t-caption">37 / 83</div>
+  <div class="chrome-progress"><span style="width: 44.58%"></span></div>
 </section>
 
 <!-- ============== §5 GenAI – Бизнес-эффект (NEW) ============== -->
@@ -2461,8 +2539,8 @@ html, body {
     </div>
     <div style="background: var(--bg-elevated); border-left: 3px solid var(--accent); padding: 14px 22px; border-radius: 0 6px 6px 0; margin-top: 20px; max-width: 1400px; margin-left: auto; margin-right: auto; font-size: 16px; color: var(--text-secondary); font-style: italic;">Цифры – типовые диапазоны по открытым кейсам. Реальный эффект сильно зависит от того, как процесс перестроен под AI, и от качества проверки на выходе.</div>
   </div>
-  <div class="chrome-num t-caption">38 / 79</div>
-  <div class="chrome-progress"><span style="width: 48.1%"></span></div>
+  <div class="chrome-num t-caption">38 / 83</div>
+  <div class="chrome-progress"><span style="width: 45.78%"></span></div>
 </section>
 
 <!-- ============== §5 GenAI – Где может ошибаться (NEW) ============== -->
@@ -2496,8 +2574,8 @@ html, body {
       </div>
     </div>
   </div>
-  <div class="chrome-num t-caption">39 / 79</div>
-  <div class="chrome-progress"><span style="width: 49.37%"></span></div>
+  <div class="chrome-num t-caption">39 / 83</div>
+  <div class="chrome-progress"><span style="width: 46.99%"></span></div>
 </section>
 
 <!-- ============== SLIDE 15 – Demo: digit counting in BIK ============== -->
@@ -2571,8 +2649,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Как устроено</div>
-  <div class="chrome-num t-caption">40 / 79</div>
-  <div class="chrome-progress"><span style="width: 50.63%"></span></div>
+  <div class="chrome-num t-caption">40 / 83</div>
+  <div class="chrome-progress"><span style="width: 48.19%"></span></div>
 </section>
 
 <!-- ============== SLIDE 16 – Demo: fabrication of ESG research ============== -->
@@ -2634,8 +2712,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Как устроено</div>
-  <div class="chrome-num t-caption">41 / 79</div>
-  <div class="chrome-progress"><span style="width: 51.9%"></span></div>
+  <div class="chrome-num t-caption">41 / 83</div>
+  <div class="chrome-progress"><span style="width: 49.4%"></span></div>
 </section>
 
 <!-- ============== SLIDE 17 – Demo: arithmetic ============== -->
@@ -2699,8 +2777,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Как устроено</div>
-  <div class="chrome-num t-caption">42 / 79</div>
-  <div class="chrome-progress"><span style="width: 53.16%"></span></div>
+  <div class="chrome-num t-caption">42 / 83</div>
+  <div class="chrome-progress"><span style="width: 50.6%"></span></div>
 </section>
 
 <!-- ============== SLIDE 18 – Главный вывод ============== -->
@@ -2712,8 +2790,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Как устроено</div>
-  <div class="chrome-num t-caption">43 / 79</div>
-  <div class="chrome-progress"><span style="width: 54.43%"></span></div>
+  <div class="chrome-num t-caption">43 / 83</div>
+  <div class="chrome-progress"><span style="width: 51.81%"></span></div>
 </section>
 
 <!-- ============== SLIDE 19 – Вопрос аудитории (после §2, перед перерывом) ============== -->
@@ -2741,8 +2819,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Обсуждение</div>
-  <div class="chrome-num t-caption">44 / 79</div>
-  <div class="chrome-progress"><span style="width: 55.7%"></span></div>
+  <div class="chrome-num t-caption">44 / 83</div>
+  <div class="chrome-progress"><span style="width: 53.01%"></span></div>
 </section>
 
 <!-- ============== SLIDE 20 – Перерыв (был SLIDE 19) ============== -->
@@ -2755,8 +2833,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Перерыв</div>
-  <div class="chrome-num t-caption">45 / 79</div>
-  <div class="chrome-progress"><span style="width: 56.96%"></span></div>
+  <div class="chrome-num t-caption">45 / 83</div>
+  <div class="chrome-progress"><span style="width: 54.22%"></span></div>
 </section>
 
 <!-- ============== SLIDE 20 – Карта применимости ============== -->
@@ -2770,8 +2848,8 @@ html, body {
       <p class="tagline anim" style="animation-delay: 600ms">От теории к практике – реальные кейсы с измеримым эффектом.</p>
     </div>
   </div>
-  <div class="chrome-num t-caption">46 / 79</div>
-  <div class="chrome-progress"><span style="width: 58.23%"></span></div>
+  <div class="chrome-num t-caption">46 / 83</div>
+  <div class="chrome-progress"><span style="width: 55.42%"></span></div>
 </section>
 <section class="slide" data-section="§4 · Где AI помогает">
   <div class="slide-inner">
@@ -2815,8 +2893,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Где помогает</div>
-  <div class="chrome-num t-caption">47 / 79</div>
-  <div class="chrome-progress"><span style="width: 59.49%"></span></div>
+  <div class="chrome-num t-caption">47 / 83</div>
+  <div class="chrome-progress"><span style="width: 56.63%"></span></div>
 </section>
 
 <!-- ============== SLIDE 21 – Где AI помогает ============== -->
@@ -2866,8 +2944,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Где помогает</div>
-  <div class="chrome-num t-caption">48 / 79</div>
-  <div class="chrome-progress"><span style="width: 60.76%"></span></div>
+  <div class="chrome-num t-caption">48 / 83</div>
+  <div class="chrome-progress"><span style="width: 57.83%"></span></div>
 </section>
 
 <!-- ============== SLIDE 22 – Letter draft ============== -->
@@ -2896,8 +2974,8 @@ html, body {
     <div class="s22-bottom anim" style="animation-delay: 600ms">Черновик за 5 секунд. Дальше – обычный процесс: правки, проверка комплаенс, отправка.</div>
   </div>
   <div class="chrome-section t-caption">Где помогает</div>
-  <div class="chrome-num t-caption">49 / 79</div>
-  <div class="chrome-progress"><span style="width: 62.03%"></span></div>
+  <div class="chrome-num t-caption">49 / 83</div>
+  <div class="chrome-progress"><span style="width: 59.04%"></span></div>
 </section>
 
 <!-- ============== SLIDE 23 – Summarization ============== -->
@@ -2934,8 +3012,8 @@ html, body {
     <div class="s23-cap anim" style="animation-delay: 800ms">Один из пунктов оказался выводом, которого в исходном тексте не было. Удалил при проверке. Это нормальный режим работы с AI, а не аномалия.</div>
   </div>
   <div class="chrome-section t-caption">Где помогает</div>
-  <div class="chrome-num t-caption">50 / 79</div>
-  <div class="chrome-progress"><span style="width: 63.29%"></span></div>
+  <div class="chrome-num t-caption">50 / 83</div>
+  <div class="chrome-progress"><span style="width: 60.24%"></span></div>
 </section>
 
 <!-- ============== SLIDE 25 – Notes → document (was 24) ============== -->
@@ -2973,8 +3051,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Где помогает</div>
-  <div class="chrome-num t-caption">51 / 79</div>
-  <div class="chrome-progress"><span style="width: 64.56%"></span></div>
+  <div class="chrome-num t-caption">51 / 83</div>
+  <div class="chrome-progress"><span style="width: 61.45%"></span></div>
 </section>
 
 <!-- ============== SLIDE 24 – Speech analytics: deep example (4 robots pipeline) ============== -->
@@ -3097,12 +3175,198 @@ html, body {
       <div class="finale-detail">Роботы 1 и 2 – старая, проверенная технология (NICE, Verint, CallMiner – в банках больше 10 лет). Роботы 3 и 4 – новый GenAI-слой поверх. Главный риск – сбой одного робота незаметно идёт в работу следующего, а на выходе человек видит уверенный отчёт без следов того, что внутри что-то пошло не так.</div>
     </div>
   </div>
-  <div class="chrome-section t-caption">Где помогает</div>
-  <div class="chrome-num t-caption">52 / 79</div>
-  <div class="chrome-progress"><span style="width: 65.82%"></span></div>
+  <div class="chrome-num t-caption">52 / 83</div>
+  <div class="chrome-progress"><span style="width: 62.65%"></span></div>
 </section>
 
-<!-- ============== SLIDE 25 – Risks matrix ============== -->
+<!-- ============== §4 – Кейс: Чат-бот для МСБ (NEW) ============== -->
+<section class="slide compact" data-section="§4 · Где AI помогает">
+  <div class="slide-inner">
+    <div class="example-badge anim"><span class="num">#1</span> Кейс – Чат-бот для МСБ</div>
+    <div class="title-block anim" style="margin-bottom: 24px;">
+      <div class="eyebrow"><span class="t-caption secondary">Раздел 4 – Реальный кейс</span></div>
+      <h2 class="t-h2">Чат-бот для малого и среднего бизнеса</h2>
+      <p class="subtitle">Цифровой помощник, который автоматизирует обслуживание клиентов МСБ и упрощает работу сотрудников.</p>
+    </div>
+    <div class="case-layout">
+      <div class="case-text">
+        <div class="bullet-group">
+          <div class="group-name">Клиентам:</div>
+          <ul>
+            <li>Консультации по продуктам и тарифам</li>
+            <li>Статус заявок и операций</li>
+            <li>Оформление заявок (кредит, счёт, POS)</li>
+            <li>Помощь с документами и реквизитами</li>
+          </ul>
+        </div>
+        <div class="bullet-group">
+          <div class="group-name">Сотрудникам:</div>
+          <ul>
+            <li>Быстрый поиск регламентов и условий</li>
+            <li>Генерация писем и коммерческих предложений</li>
+            <li>Проверка документов и автоматизация рутины</li>
+            <li>Обучение и ответы на внутренние вопросы</li>
+          </ul>
+        </div>
+        <div class="case-result">
+          <div class="lbl">Результат</div>
+          <div class="txt">Быстрее обслуживание, меньше нагрузки на персонал, выше качество сервиса.</div>
+        </div>
+      </div>
+      <div class="bank-chat anim" style="animation-delay: 300ms">
+        <div class="bank-chat-header">
+          <span class="back">‹</span>
+          <div class="name">Ассистент 24/7</div>
+          <div class="status">В сети</div>
+          <span class="avatar">A</span>
+        </div>
+        <div class="bank-chat-body">
+          <div class="bank-chat-day">Сегодня</div>
+          <div class="bank-msg user">здравствуйте<br>хочу узнать насчет овердрафта под обороты пос терминала. какая у вас сейчас ставка годовая? и есть комиссия за выдачу?<br>спасибо<div class="time">14:26</div></div>
+          <div class="bank-msg bot">Добрый день!<br>Ставка вознаграждения по продукту «Овердрафт под обороты POS-терминала» начинается от <strong>21,25%</strong> годовых (под обороты в Банке). Комиссия за организацию предоставления кредитного инструмента составляет <strong>1%</strong> от лимита кредитной линии.<div class="time">14:27</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-num t-caption">53 / 83</div>
+  <div class="chrome-progress"><span style="width: 63.86%"></span></div>
+</section>
+
+<!-- ============== §4 – Кейс: Чат-бот для ФЛ (NEW) ============== -->
+<section class="slide compact" data-section="§4 · Где AI помогает">
+  <div class="slide-inner">
+    <div class="example-badge anim"><span class="num">#2</span> Кейс – Чат-бот для ФЛ</div>
+    <div class="title-block anim" style="margin-bottom: 16px;">
+      <div class="eyebrow"><span class="t-caption secondary">Раздел 4 – Реальный кейс</span></div>
+      <h2 class="t-h2">Чат-бот для физических лиц</h2>
+      <p class="subtitle">Интегрирован с банковскими системами (Colvir и др.) – вытаскивает данные про аресты, инкассовые распоряжения, ЧСИ напрямую и сразу даёт клиенту конкретный ответ.</p>
+    </div>
+    <div class="case-layout">
+      <div class="case-text">
+        <div class="case-metric anim" style="animation-delay: 200ms">
+          <span class="num">40–50%</span>
+          <span class="lbl">клиентских чат-обращений<br>закрываются без оператора (CoR)</span>
+        </div>
+        <div style="font-size: 19px; color: var(--text-primary); line-height: 1.5;">
+          <strong style="color: var(--accent);">Как работает:</strong><br>
+          <ol style="padding-left: 22px; margin-top: 8px; display: flex; flex-direction: column; gap: 8px;">
+            <li>Клиент пишет: «Почему не могу перевести деньги?»</li>
+            <li>Бот отправляет запрос в Colvir, получает данные про аресты, ЧСИ, инкассовые распоряжения</li>
+            <li>Сразу даёт конкретный ответ: <em>кто</em> наложил, <em>когда</em>, <em>на какую сумму</em>, <em>что делать</em></li>
+          </ol>
+        </div>
+        <div class="case-result">
+          <div class="lbl">Результат</div>
+          <div class="txt">Половина обращений закрывается без участия оператора. Клиенты получают ответ за секунды вместо ожидания на линии.</div>
+        </div>
+      </div>
+      <div class="bank-chat anim" style="animation-delay: 300ms">
+        <div class="bank-chat-header">
+          <span class="back">‹</span>
+          <div class="name">Ассистент 24/7</div>
+          <div class="status">В сети</div>
+          <span class="avatar">F</span>
+        </div>
+        <div class="bank-chat-body">
+          <div class="bank-chat-day">Сегодня</div>
+          <div class="bank-msg user">Проверьте, у меня была блокировка от судебного исполнителя<div class="time">08:37</div></div>
+          <div class="bank-msg bot">Добро пожаловать в ForteBank, Алихан! Я – чат-бот Forte AI, я здесь, чтобы помочь Вам 💪<div class="time">08:37</div></div>
+          <div class="bank-msg bot">По данным на 05.12.2025 у вас имеется выставленное инкассовое распоряжение:<br><br>– Судебный исполнитель: <strong>ЕЛЕУСИЗОВ ДАМИР КУМАРКАНОВИЧ</strong><br>– Дата выставления: 03.12.2025<br>– Сумма ограничения: <strong>230 000 тенге</strong><br>– Контактный номер: 8 747 345 67 89<br><br>Чтобы снять ограничение, нужно обратиться к судебному исполнителю.<div class="time">08:37</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-num t-caption">54 / 83</div>
+  <div class="chrome-progress"><span style="width: 65.06%"></span></div>
+</section>
+
+<!-- ============== §4 – Кейс: Голосовой бот (NEW) ============== -->
+<section class="slide compact" data-section="§4 · Где AI помогает">
+  <div class="slide-inner">
+    <div class="example-badge anim"><span class="num">#3</span> Кейс – Голосовой бот</div>
+    <div class="title-block anim" style="margin-bottom: 16px;">
+      <div class="eyebrow"><span class="t-caption secondary">Раздел 4 – Реальный кейс</span></div>
+      <h2 class="t-h2">Голосовой бот для входящих и исходящих звонков</h2>
+      <p class="subtitle">Гибрид DL (распознавание речи + синтез) и GenAI (понимание запроса + генерация ответа). Снимает простые обращения без оператора.</p>
+    </div>
+    <div class="voice-flow">
+      <div class="voice-stage anim" style="animation-delay: 100ms">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 C10 2 9 3.5 9 5 V11 C9 12.5 10 14 12 14 C14 14 15 12.5 15 11 V5 C15 3.5 14 2 12 2 Z"/><path d="M5 11 V12 C5 16 8 19 12 19 C16 19 19 16 19 12 V11"/><path d="M12 19 V22 M9 22 H15"/></svg>
+        <div class="v-tag">Шаг 1 · ASR</div>
+        <div class="v-name">Слышит клиента</div>
+        <div class="v-d">Распознаёт речь в текст в реальном времени, держит контекст разговора</div>
+      </div>
+      <div class="voice-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12 H20 M14 6 L20 12 L14 18"/></svg></div>
+      <div class="voice-stage anim" style="animation-delay: 250ms">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 11 L11 13 L15 9"/><path d="M5.5 16 L8 14 M18.5 16 L16 14"/></svg>
+        <div class="v-tag">Шаг 2 · LLM</div>
+        <div class="v-name">Понимает запрос</div>
+        <div class="v-d">Определяет тему: баланс, статус операции, блокировка, оформление продукта</div>
+      </div>
+      <div class="voice-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12 H20 M14 6 L20 12 L14 18"/></svg></div>
+      <div class="voice-stage anim" style="animation-delay: 400ms">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12 H6 L9 6 L13 18 L17 8 L19 12 H21"/></svg>
+        <div class="v-tag">Шаг 3 · TTS</div>
+        <div class="v-name">Отвечает голосом</div>
+        <div class="v-d">Синтезирует естественный голос, неотличимый от оператора. При сложном кейсе – переключает на человека</div>
+      </div>
+    </div>
+    <div class="case-result anim" style="animation-delay: 600ms; max-width: 1400px; margin: 16px auto 0;">
+      <div class="lbl">Где применяется</div>
+      <div class="txt">Входящие: проверка баланса, статус заявки, блокировка карты, FAQ. Исходящие: подтверждение операций, напоминание о платеже, антифрод-проверки. Снимает <strong style="color: var(--accent)">30–50% входящих звонков</strong> без оператора.</div>
+    </div>
+  </div>
+  <div class="chrome-num t-caption">55 / 83</div>
+  <div class="chrome-progress"><span style="width: 66.27%"></span></div>
+</section>
+
+<!-- ============== §4 – Кейс: Санкционный контроль (Hybrid OCR + LLM) (NEW) ============== -->
+<section class="slide compact" data-section="§4 · Где AI помогает">
+  <div class="slide-inner">
+    <div class="example-badge anim"><span class="num">#4</span> Кейс – Санкционный контроль (гибрид)</div>
+    <div class="title-block anim" style="margin-bottom: 16px;">
+      <div class="eyebrow"><span class="t-caption secondary">Раздел 4 – Реальный кейс (DL + GenAI вместе)</span></div>
+      <h2 class="t-h2">Санкционный контроль платежей: OCR + LLM</h2>
+      <p class="subtitle">То, что раньше делал человек 30 минут на платёж, теперь делает связка DL и GenAI за секунды. Человек только подтверждает спорные кейсы.</p>
+    </div>
+    <div class="hybrid-flow">
+      <div class="hybrid-step dl">
+        <span class="tech-tag">DL · OCR</span>
+        <div class="step-num">1</div>
+        <div class="step-h">Извлечение реквизитов</div>
+        <div class="step-d">OCR читает платёжный документ и достаёт: получателя, страну, банк-корреспондент, назначение, сумму.</div>
+      </div>
+      <div class="hybrid-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12 H20 M14 6 L20 12 L14 18"/></svg></div>
+      <div class="hybrid-step gen">
+        <span class="tech-tag">GenAI · LLM</span>
+        <div class="step-num">2</div>
+        <div class="step-h">Анализ контекста</div>
+        <div class="step-d">LLM смотрит на назначение и реквизиты, понимает суть операции – есть ли скрытые признаки санкционного риска (двойное назначение, стоп-слова, страны).</div>
+      </div>
+      <div class="hybrid-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12 H20 M14 6 L20 12 L14 18"/></svg></div>
+      <div class="hybrid-step ml">
+        <span class="tech-tag">Web · API</span>
+        <div class="step-num">3</div>
+        <div class="step-h">Проверка по спискам</div>
+        <div class="step-d">Сверка получателя по OFAC, EU, UN, локальным санкционным спискам. Поиск компании в чёрных списках, проверка бенефициаров.</div>
+      </div>
+      <div class="hybrid-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12 H20 M14 6 L20 12 L14 18"/></svg></div>
+      <div class="hybrid-step gen">
+        <span class="tech-tag">GenAI · LLM</span>
+        <div class="step-num">4</div>
+        <div class="step-h">Сводное заключение</div>
+        <div class="step-d">LLM собирает всё в один ответ: «зелёный / жёлтый / красный» с обоснованием. Человек проверяет только жёлтые и красные.</div>
+      </div>
+    </div>
+    <div class="case-result anim" style="animation-delay: 800ms; max-width: 1500px; margin: 16px auto 0;">
+      <div class="lbl">Эффект</div>
+      <div class="txt">С <strong style="color: var(--accent)">30 минут</strong> на платёж до <strong style="color: var(--accent)">10 секунд</strong>. Человек подтверждает только сомнительные кейсы – а это <strong style="color: var(--accent)">5–10%</strong> объёма. Это и есть «AI делает то, что мог человек» – но в разы быстрее.</div>
+    </div>
+  </div>
+  <div class="chrome-num t-caption">56 / 83</div>
+  <div class="chrome-progress"><span style="width: 67.47%"></span></div>
+</section>
+
 <!-- ============== TRANSITION – Раздел 7 ============== -->
 <section class="slide center" data-section="§5 · Где AI бесполезен и риски">
   <div class="slide-inner" style="align-items: center; justify-content: center;">
@@ -3113,8 +3377,8 @@ html, body {
       <p class="tagline anim" style="animation-delay: 600ms">Где не помогает, где опасен, и каких мифов стоит избегать.</p>
     </div>
   </div>
-  <div class="chrome-num t-caption">53 / 79</div>
-  <div class="chrome-progress"><span style="width: 67.09%"></span></div>
+  <div class="chrome-num t-caption">57 / 83</div>
+  <div class="chrome-progress"><span style="width: 68.67%"></span></div>
 </section>
 <section class="slide" data-section="§5 · Где AI бесполезен и риски">
   <div class="slide-inner">
@@ -3161,8 +3425,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Риски</div>
-  <div class="chrome-num t-caption">54 / 79</div>
-  <div class="chrome-progress"><span style="width: 68.35%"></span></div>
+  <div class="chrome-num t-caption">58 / 83</div>
+  <div class="chrome-progress"><span style="width: 69.88%"></span></div>
 </section>
 
 <!-- ============== SLIDE 26 – Confidence chart ============== -->
@@ -3206,8 +3470,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Риски</div>
-  <div class="chrome-num t-caption">55 / 79</div>
-  <div class="chrome-progress"><span style="width: 69.62%"></span></div>
+  <div class="chrome-num t-caption">59 / 83</div>
+  <div class="chrome-progress"><span style="width: 71.08%"></span></div>
 </section>
 
 <!-- ============== SLIDE 27 – Stable errors ============== -->
@@ -3252,8 +3516,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Риски</div>
-  <div class="chrome-num t-caption">56 / 79</div>
-  <div class="chrome-progress"><span style="width: 70.89%"></span></div>
+  <div class="chrome-num t-caption">60 / 83</div>
+  <div class="chrome-progress"><span style="width: 72.29%"></span></div>
 </section>
 
 <!-- ============== SLIDE 28 – Data flow ============== -->
@@ -3295,8 +3559,8 @@ html, body {
     <div class="s28-cap anim" style="animation-delay: 750ms">Простое правило: если эти данные нельзя отправить внешнему получателю по обычной почте – в публичный AI-инструмент их тоже нельзя.</div>
   </div>
   <div class="chrome-section t-caption">Риски</div>
-  <div class="chrome-num t-caption">57 / 79</div>
-  <div class="chrome-progress"><span style="width: 72.15%"></span></div>
+  <div class="chrome-num t-caption">61 / 83</div>
+  <div class="chrome-progress"><span style="width: 73.49%"></span></div>
 </section>
 
 <!-- ============== SLIDE NEW – Infrastructure (moved here from §2; now in §4 with vendor/cost/regulatory framing) ============== -->
@@ -3334,8 +3598,8 @@ html, body {
     <div class="infra-finale anim" style="animation-delay: 600ms">Это <strong style="color: var(--accent)">индустриальная инфраструктура</strong>, а не «один сервер на стороне». Поэтому скорость в миллисекундах, поэтому стоимость API в центах за запрос, и поэтому зависимость от трёх–четырёх крупных провайдеров с известной географией.</div>
   </div>
   <div class="chrome-section t-caption">Риски</div>
-  <div class="chrome-num t-caption">58 / 79</div>
-  <div class="chrome-progress"><span style="width: 73.42%"></span></div>
+  <div class="chrome-num t-caption">62 / 83</div>
+  <div class="chrome-progress"><span style="width: 74.7%"></span></div>
 </section>
 
 <!-- ============== SLIDE 29 – Public cases ============== -->
@@ -3370,8 +3634,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Риски</div>
-  <div class="chrome-num t-caption">59 / 79</div>
-  <div class="chrome-progress"><span style="width: 74.68%"></span></div>
+  <div class="chrome-num t-caption">63 / 83</div>
+  <div class="chrome-progress"><span style="width: 75.9%"></span></div>
 </section>
 
 <!-- ============== SLIDE Q2 – Вопрос аудитории (после §4 – рисков, перед §5 – ответственностью) ============== -->
@@ -3399,8 +3663,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Обсуждение</div>
-  <div class="chrome-num t-caption">60 / 79</div>
-  <div class="chrome-progress"><span style="width: 75.95%"></span></div>
+  <div class="chrome-num t-caption">64 / 83</div>
+  <div class="chrome-progress"><span style="width: 77.11%"></span></div>
 </section>
 
 <!-- ============== SLIDE 32 – Workflow (был SLIDE 30/31) ============== -->
@@ -3414,8 +3678,8 @@ html, body {
       <p class="tagline anim" style="animation-delay: 600ms">AI готовит черновик. Подпись и решения остаются за человеком.</p>
     </div>
   </div>
-  <div class="chrome-num t-caption">61 / 79</div>
-  <div class="chrome-progress"><span style="width: 77.22%"></span></div>
+  <div class="chrome-num t-caption">65 / 83</div>
+  <div class="chrome-progress"><span style="width: 78.31%"></span></div>
 </section>
 <section class="slide" data-section="§6 · Роль человека">
   <div class="slide-inner">
@@ -3451,8 +3715,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Ответственность</div>
-  <div class="chrome-num t-caption">62 / 79</div>
-  <div class="chrome-progress"><span style="width: 78.48%"></span></div>
+  <div class="chrome-num t-caption">66 / 83</div>
+  <div class="chrome-progress"><span style="width: 79.52%"></span></div>
 </section>
 
 <!-- ============== SLIDE 31 – Кто отвечает ============== -->
@@ -3466,8 +3730,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Ответственность</div>
-  <div class="chrome-num t-caption">63 / 79</div>
-  <div class="chrome-progress"><span style="width: 79.75%"></span></div>
+  <div class="chrome-num t-caption">67 / 83</div>
+  <div class="chrome-progress"><span style="width: 80.72%"></span></div>
 </section>
 
 <!-- ============== SLIDE 32 – Принцип ============== -->
@@ -3480,8 +3744,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Ответственность</div>
-  <div class="chrome-num t-caption">64 / 79</div>
-  <div class="chrome-progress"><span style="width: 81.01%"></span></div>
+  <div class="chrome-num t-caption">68 / 83</div>
+  <div class="chrome-progress"><span style="width: 81.93%"></span></div>
 </section>
 
 <!-- ============== SLIDE 33 – Five principles ============== -->
@@ -3495,8 +3759,8 @@ html, body {
       <p class="tagline anim" style="animation-delay: 600ms">Пять рабочих правил для повседневной работы.</p>
     </div>
   </div>
-  <div class="chrome-num t-caption">65 / 79</div>
-  <div class="chrome-progress"><span style="width: 82.28%"></span></div>
+  <div class="chrome-num t-caption">69 / 83</div>
+  <div class="chrome-progress"><span style="width: 83.13%"></span></div>
 </section>
 <section class="slide" data-section="§7 · Принципы">
   <div class="slide-inner">
@@ -3533,8 +3797,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Принципы</div>
-  <div class="chrome-num t-caption">66 / 79</div>
-  <div class="chrome-progress"><span style="width: 83.54%"></span></div>
+  <div class="chrome-num t-caption">70 / 83</div>
+  <div class="chrome-progress"><span style="width: 84.34%"></span></div>
 </section>
 
 <!-- ============== SLIDE 34 – Context ============== -->
@@ -3564,8 +3828,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Принципы</div>
-  <div class="chrome-num t-caption">67 / 79</div>
-  <div class="chrome-progress"><span style="width: 84.81%"></span></div>
+  <div class="chrome-num t-caption">71 / 83</div>
+  <div class="chrome-progress"><span style="width: 85.54%"></span></div>
 </section>
 
 <!-- ============== SLIDE 35 – Verify ============== -->
@@ -3595,8 +3859,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Принципы</div>
-  <div class="chrome-num t-caption">68 / 79</div>
-  <div class="chrome-progress"><span style="width: 86.08%"></span></div>
+  <div class="chrome-num t-caption">72 / 83</div>
+  <div class="chrome-progress"><span style="width: 86.75%"></span></div>
 </section>
 
 <!-- ============== SLIDE 36 – Sensitive data ============== -->
@@ -3623,8 +3887,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Принципы</div>
-  <div class="chrome-num t-caption">69 / 79</div>
-  <div class="chrome-progress"><span style="width: 87.34%"></span></div>
+  <div class="chrome-num t-caption">73 / 83</div>
+  <div class="chrome-progress"><span style="width: 87.95%"></span></div>
 </section>
 
 <!-- ============== SLIDE 37 – 80/20 ============== -->
@@ -3651,8 +3915,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Принципы</div>
-  <div class="chrome-num t-caption">70 / 79</div>
-  <div class="chrome-progress"><span style="width: 88.61%"></span></div>
+  <div class="chrome-num t-caption">74 / 83</div>
+  <div class="chrome-progress"><span style="width: 89.16%"></span></div>
 </section>
 
 <!-- ============== SLIDE 38 – Cannot verify ============== -->
@@ -3672,8 +3936,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Принципы</div>
-  <div class="chrome-num t-caption">71 / 79</div>
-  <div class="chrome-progress"><span style="width: 89.87%"></span></div>
+  <div class="chrome-num t-caption">75 / 83</div>
+  <div class="chrome-progress"><span style="width: 90.36%"></span></div>
 </section>
 
 <!-- ============== SLIDE 39 – Diagnostic intro ============== -->
@@ -3687,8 +3951,8 @@ html, body {
       <p class="tagline anim" style="animation-delay: 600ms">Где каждый из нас сейчас в работе с AI.</p>
     </div>
   </div>
-  <div class="chrome-num t-caption">72 / 79</div>
-  <div class="chrome-progress"><span style="width: 91.14%"></span></div>
+  <div class="chrome-num t-caption">76 / 83</div>
+  <div class="chrome-progress"><span style="width: 91.57%"></span></div>
 </section>
 <section class="slide center" data-section="§8 · Я и AI: где мы?">
   <div class="slide-inner" style="align-items: center; justify-content: center;">
@@ -3723,8 +3987,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Диагностика</div>
-  <div class="chrome-num t-caption">73 / 79</div>
-  <div class="chrome-progress"><span style="width: 92.41%"></span></div>
+  <div class="chrome-num t-caption">77 / 83</div>
+  <div class="chrome-progress"><span style="width: 92.77%"></span></div>
 </section>
 
 <!-- ============== SLIDE 40 – Four questions ============== -->
@@ -3758,8 +4022,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Диагностика</div>
-  <div class="chrome-num t-caption">74 / 79</div>
-  <div class="chrome-progress"><span style="width: 93.67%"></span></div>
+  <div class="chrome-num t-caption">78 / 83</div>
+  <div class="chrome-progress"><span style="width: 93.98%"></span></div>
 </section>
 
 <!-- ============== SLIDE 41 – Share ============== -->
@@ -3789,8 +4053,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Диагностика</div>
-  <div class="chrome-num t-caption">75 / 79</div>
-  <div class="chrome-progress"><span style="width: 94.94%"></span></div>
+  <div class="chrome-num t-caption">79 / 83</div>
+  <div class="chrome-progress"><span style="width: 95.18%"></span></div>
 </section>
 
 <!-- ============== SLIDE 42 – Takeaways ============== -->
@@ -3804,8 +4068,8 @@ html, body {
       <p class="tagline anim" style="animation-delay: 600ms">Главное за сегодня и что дальше.</p>
     </div>
   </div>
-  <div class="chrome-num t-caption">76 / 79</div>
-  <div class="chrome-progress"><span style="width: 96.2%"></span></div>
+  <div class="chrome-num t-caption">80 / 83</div>
+  <div class="chrome-progress"><span style="width: 96.39%"></span></div>
 </section>
 <section class="slide compact" data-section="Итоги">
   <div class="slide-inner">
@@ -3842,8 +4106,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Итоги</div>
-  <div class="chrome-num t-caption">77 / 79</div>
-  <div class="chrome-progress"><span style="width: 97.47%"></span></div>
+  <div class="chrome-num t-caption">81 / 83</div>
+  <div class="chrome-progress"><span style="width: 97.59%"></span></div>
 </section>
 
 <!-- ============== SLIDE 43 – What's next ============== -->
@@ -3856,8 +4120,8 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Итоги</div>
-  <div class="chrome-num t-caption">78 / 79</div>
-  <div class="chrome-progress"><span style="width: 98.73%"></span></div>
+  <div class="chrome-num t-caption">82 / 83</div>
+  <div class="chrome-progress"><span style="width: 98.8%"></span></div>
 </section>
 
 <!-- ============== SLIDE 44 – Thanks ============== -->
@@ -3869,7 +4133,7 @@ html, body {
     </div>
   </div>
   <div class="chrome-section t-caption">Итоги</div>
-  <div class="chrome-num t-caption">79 / 79</div>
+  <div class="chrome-num t-caption">83 / 83</div>
   <div class="chrome-progress"><span style="width: 100%"></span></div>
 </section>
 
